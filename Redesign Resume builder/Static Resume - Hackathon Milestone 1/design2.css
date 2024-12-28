@@ -1,0 +1,113 @@
+.main-div{
+  display: flex;
+  background-color: rgb(231, 129, 56);
+  padding-right: 1%;
+  padding-left: 1%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  gap: 2%;
+}
+
+.left-div{
+  border-radius: 30px;
+  width: 30%;
+  background-color:  rgb(238, 146, 80);
+  padding: 4%;
+
+}
+
+.img-div{
+  margin-left: 1%;
+  margin-bottom: 8%;
+}
+
+#mypic{
+  width: 285px;
+  height: 255px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 20px black;
+}
+
+.name-div,.contact-div ,.summary-div ,.skills-div{
+  margin:0px 0px;
+  margin-left: 8%;
+}
+
+.name-div #name ,#heading{
+  margin:0px 0px;
+}
+
+a{
+  text-decoration: none;
+  color:inherit;
+}
+
+
+/* rightDiv */
+
+.right-div{
+  border-radius:30px;
+  background-color:  rgb(227, 158, 110);
+  padding:5%;
+}
+
+.toggle-button{
+  height:40px;
+  width: 120px;
+  color: black;
+  background-color:  rgb(231, 129, 56);
+  border-radius: 10px;
+  margin-left: 20px;
+  font-weight: bold;
+  border-color: black;
+  cursor: pointer;
+}
+.toggle-button:hover{
+  background-color:  rgb(238, 146, 80);
+  transition: 0.15s;
+}
+
+
+/* Media Queries */
+/* Mobile (max-width: 600px) */
+@media (max-width: 600px) {
+  .main-div {
+    flex-direction: row; /* Stack left and right divs vertically */
+    padding: 2%;
+  }
+  h1{
+    font-size:medium;
+  }
+  p{
+    font-size: smaller;
+  }
+  .left-div {
+    width: 100; /* Full width for smaller screens */
+    margin-bottom: 20px;
+  }
+  #mypic {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+/* Tablet (601px to 1024px) */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .left-div {
+    width: 40%;
+  }
+  #mypic {
+    width: 250px;
+    height: 230px;
+  }
+}
+
+/* Desktop (1025px and above) */
+@media (min-width: 1025px) {
+  .main-div {
+    flex-direction: row; /* Side-by-side layout for larger screens */
+  }
+  .left-div {
+    width: 30%; /* Original width for desktop */
+  }
+}

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dynamic Resume</title>
+  <link rel="stylesheet" href="design.css"/>
+</head>
+<body>
+  <div class="container">
+    <h1 id="heading">Dynamic Resume Generate</h1>
+    <form id="resume-form">
+      <!-- Header/Contact -->
+      <fieldset>
+        <legend>UserName:</legend>
+        <input id="username" type="text" placeholder="Username" required/><br /><br />
+
+        <legend>Contact Information</legend><br />
+        <label for="photo">Upload Photo:</label>
+        <input id="profile-pic" type="file" name="photo" required><br /><br /><br />
+
+        <label for="name">Full Name:</label>
+        <input id="name" type="text" name="name" required/><br /><br />
+        
+        <label for="email">Email:</label>
+        <input id="email" type="email" name="email" required/><br /><br />
+        
+        <label for="phone">Phone:</label>
+        <input id="phone" type="tel" name="phone" required/>
+      </fieldset>
+
+      <!-- Education -->
+      <fieldset>
+        <legend>Education:</legend>
+        <label>Field of Study:</label>
+        <input id="studyfield" type="text" name="studyfield" required/><br /><br />
+
+        <label>Last Education:</label>
+        <input id="lastEdu" type="text" name="education" required/>
+      </fieldset>
+
+      <!-- Work Experience -->
+      <fieldset>
+        <legend>Work Experience:</legend>
+        <label>Details:</label>
+        <textarea id="workexp" name="workexp"></textarea>
+      </fieldset>
+
+      <!-- Skills -->
+      <fieldset>
+        <legend>Skills:</legend>
+        <label>Write your Skills:</label>
+        <textarea id="skills" name="skills" required></textarea>
+      </fieldset>
+
+      <!-- Achievements/Projects -->
+      <fieldset>
+        <legend>Achievements/Projects:</legend>
+        <label>Write your Achievements & Projects:</label>
+        <input id="achievement" type="text" name="projects"/>
+      </fieldset>
+
+      <!-- Summary -->
+      <fieldset>
+        <legend>Summary:</legend>
+        <label>Write a Summary:</label>
+        <textarea id="summary" placeholder="Summary..." required></textarea>
+      </fieldset>
+
+      <button id="submit" type="submit">Generate Resume</button>
+    </form>
+  </div>
+
+  <!-- Structure for generation of resume  -->
+  <div id="resumePage" class="hidden">
+    <div id="resumeContent" class="resumeContent">
+      <img id="resumePic" class="resume-photo" src="" alt="photo"/>
+      <h1 id="resume-name"></h1>
+      <p id="resume-email"></p>
+      <p id="resume-phone"></p>
+
+      <h2>Education:</h2>
+      <p id="resume-studyfield"></p>
+      <p id="resume-lastEdu"></p>
+
+      <h2>Work Experience:</h2>
+      <p id="resume-workexp"></p>
+
+      <h2>Skills:</h2>
+      <p id="resume-skills"></p>
+
+      <h2>Achievements/Projects:</h2>
+      <p id="resume-achievement"></p>
+
+      <h2>Summary:</h2>
+      <p id="resume-summary"></p>
+    </div>
+         
+    <button id="editbtn">Edit</button>
+    <button id="backbtn" onclick="window.location.href='index.html'">Back to Form</button>
+    <button id="downloadPDF">Download Your Resume</button>
+  </div>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+  
+  <script src="main.js"></script>
+</body>
+</html>
